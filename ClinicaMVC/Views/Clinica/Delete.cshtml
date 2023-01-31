@@ -1,0 +1,14 @@
+﻿@model ClinicaMVC.Models.Medico
+
+<h2>
+    Medico: @Model.Nombre
+</h2>
+
+<p>
+    Desea eliminar esta medico?
+</p>
+
+@using (Html.BeginForm("Delete", "Clinica", FormMethod.Post))
+{
+    <input type="button" class="btn btn-danger" action="Delete" value="Eliminar"/>
+}
