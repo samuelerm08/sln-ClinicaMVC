@@ -1,44 +1,57 @@
 ﻿@model IEnumerable<ClinicaMVC.Models.Medico>
 
 @Html.ActionLink("Crear Medico", "Create", "Clinica", new {@class="btn btn-success"})
+<section class="container">
+    <article id="SideBarOpcional">
+        <p>
+            Sistema de clinicas pensado para que puedas hacer carga de medicos
+        </p>
+    </article>
 
-<table class="table">
+    <table id="maincontent" class="table">
 
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Id)</th>
-            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
-            <th>@Html.DisplayNameFor(model => model.Apellido)</th>
-            <th>@Html.DisplayNameFor(model => model.Matricula)</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (var item in Model)
-        {
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.Apellido)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.Matricula)
-                </td>
-
-                <td>
-                    @Html.ActionLink("Ver", "Details", "Clinica", new {id = item.Id}, new {@class="btn btn-primary"})
-                    @Html.ActionLink("Borrar", "Delete", "Clinica", new {id = item.Id}, new{@class="btn btn-danger"})
-                    @Html.ActionLink("Editar", "Edit", "Clinica", new {id = item.Id}, new{@class="btn btn-warning"})
-                </td>
+                <th>@Html.DisplayNameFor(model => model.Id)</th>
+                <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+                <th>@Html.DisplayNameFor(model => model.Matricula)</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Matricula)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Ver", "Details", "Clinica", new {id = item.Id}, new {@class="btn btn-primary"})
+                        @Html.ActionLink("Borrar", "Delete", "Clinica", new {id = item.Id}, new{@class="btn btn-danger"})
+                        @Html.ActionLink("Editar", "Edit", "Clinica", new {id = item.Id}, new{@class="btn btn-warning"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <article id="SideBarOpcional2">
+        <p>
+            En ese sistema se puede cargar, modificar, ver y borrar distintos medicos
+        </p>
+    </article>
+</section>

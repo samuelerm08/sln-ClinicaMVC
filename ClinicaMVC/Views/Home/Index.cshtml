@@ -2,11 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">
-        @ViewBag.Nombre
-    </h1>    
-    <h1>
-        @ViewBag.Fecha
-    </h1>
-</div>
+<section class="container">
+    <article id="SideBarOpcional">
+        <img src="https://cdn.queplan.cl/images/elementos/clinica3.webp" />
+        <img src="https://static.mercadonegro.pe/wp-content/uploads/2021/09/20133117/clinica-internacional.jpg" />
+    </article>
+
+    <article id="maincontent" class="text-center">
+        <h1 class="display-4">
+            @ViewBag.Nombre
+        </h1>
+        <h1>
+            @ViewBag.Fecha
+        </h1>
+    </article>
+
+    <article id="SideBarOpcional2">
+        <img src="https://imasalud.com.ar/assets/images/consultorios-externos-3.jpg" />
+    </article>    
+</section>
+
+
